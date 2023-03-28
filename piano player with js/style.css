@@ -1,0 +1,143 @@
+/* Import Google font - Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #F8F8F8;
+}
+
+.wrapper {
+  padding: 35px 40px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper header {
+  display: flex;
+  color: #333;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+header .column {
+  display: flex;
+  align-items: center;
+}
+
+header span {
+  font-weight: 500;
+  margin-right: 15px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+header input {
+  outline: none;
+  border-radius: 30px;
+  border: 2px solid #ccc;
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+.volume-slider input {
+  accent-color: #1E90FF;
+}
+
+.keys-checkbox input {
+  height: 30px;
+  width: 60px;
+  cursor: pointer;
+  appearance: none;
+  position: relative;
+  background: #eee;
+  border-radius: 30px;
+  transition: background-color 0.2s ease;
+}
+
+.keys-checkbox input::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ccc;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.keys-checkbox input:checked::before {
+  left: 35px;
+  background: #1E90FF;
+}
+
+.piano-keys {
+  display: flex;
+  list-style: none;
+  margin-top: 40px;
+}
+
+.piano-keys .key {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.piano-keys .black {
+  z-index: 2;
+  width: 44px;
+  height: 140px;
+  margin: 0 -22px 0 -22px;
+  border-radius: 0 0 5px 5px;
+  background: #333;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.2s ease;
+}
+
+.piano-keys .black.active {
+  background: #1E90FF;
+}
+
+.piano-keys .white {
+  height: 230px;
+  width: 70px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+}
+.piano-keys .white.active {
+    box-shadow: inset -5px 5px 20px rgba(0,0,0,0.2);
+    background:linear-gradient(to bottom, #fff 0%, #f2f2f2 100%);
+    animation: pulse 0.5s ease-out;
+  }
+  
+  @keyframes pulse {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.05);
+    }
+  }
+  
